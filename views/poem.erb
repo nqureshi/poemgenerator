@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    Poem Generator
+  </title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <%= @poem_title %>
+  <%= @poem_author %>
+  <% @poem_text.each do |line| %>
+    <p><%= line %></p>
+  <% end %>  
+</body>
+</html>

@@ -25,13 +25,14 @@ helpers do
   end
 end
 
-before do # Set the relevant variables using the helpers
+get '/' do
+  erb :index
+end
+
+get '/poem' do
   @poem_url = get_random_poem
   @poem_title = get_poem_title(@poem_url)
   @poem_author = get_poem_author(@poem_url)
   @poem_text = get_poem_text(@poem_url)
-end
-
-get '/' do
-  erb :index
+  erb :poem
 end
